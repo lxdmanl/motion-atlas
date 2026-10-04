@@ -15,6 +15,10 @@ Source OBJ comments mention an older CC BY-SA 2.1 Japan license. The official cu
 
 BodyParts3D represents an adult male reference anatomy based on TARO MRI and anatomical illustration refinements. It is not a complete model of every possible human anatomical structure or variation. This interface is educational and is not a clinical tool.
 
+## Motion Atlas right-arm adaptation
+
+The local motion workbench derives its right arm from human-atlas commit `1c38bf35c254a891200d3cedecfd57abebe83d8d`. It retains 84 original parts and their IDs, adds educational skin weights and two explicitly schematic tendon paths, and exports a rigged GLB with Blender 4.5.14. It renders bones, muscles and selected connective structures; the original dataset's other systems remain in the source assets but are not displayed in this workbench. Deformation is illustrative and is not a physiological force simulation. Geometry alignment and 0/60/110-degree checks are documented in `docs/ASSETS.md`.
+
 ## Historical assets (not included in the current release)
 
 Earlier repository revisions included female reference anatomy: Kristen Browne and Heidi Schlehlein, Human Reference Atlas / HuBMAP, *3D Reference Organ Set for Female v1.5* (2023). CC BY 4.0. Geometry adapted for this viewer.
