@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "package": "mcp-for-blender==2.1.3",
+  "toolCount": 36,
+  "scene": {
+    "name": "Scene",
+    "object_count": 91,
+    "objects": [
+      {
+        "name": "RightArmRig",
+        "type": "ARMATURE",
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "FJ1466_Abductor digiti minimi of right hand",
+        "type": "MESH",
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "FJ1467_Acromial part of right deltoid",
+        "type": "MESH",
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "FJ1468_Clavicular part of right deltoid",
+        "type": "MESH",
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "FJ1470_Flexor digiti minimi brevis of right hand",
+        "type": "MESH",
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "FJ1471_Flexor retinaculum of right wrist",
+        "type": "MESH",
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "FJ1472_Right extensor carpi ulnaris",
+        "type": "MESH",
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "FJ1473_Humeral head of right flexor carpi ulnaris",
+        "type": "MESH",
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "FJ1474_Humeral head of right pronator teres",
+        "type": "MESH",
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "FJ1475_Right flexor digitorum superficialis",
+        "type": "MESH",
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "materials_count": 4
+  },
+  "armature": {
+    "name": "RightArmRig",
+    "type": "ARMATURE",
+    "location": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "visible": true,
+    "materials": []
+  },
+  "telemetryDisabled": true,
+  "safeMode": true
+}

@@ -1,0 +1,1089 @@
+{
+  "schemaVersion": 1,
+  "glbUrl": "/models/right-arm.glb",
+  "replacedPartIds": [
+    "FJ1466",
+    "FJ1467",
+    "FJ1468",
+    "FJ1470",
+    "FJ1471",
+    "FJ1472",
+    "FJ1473",
+    "FJ1474",
+    "FJ1475",
+    "FJ1476",
+    "FJ1477",
+    "FJ1478",
+    "FJ1479",
+    "FJ1480",
+    "FJ1481",
+    "FJ1482",
+    "FJ1483",
+    "FJ1484",
+    "FJ1485",
+    "FJ1486",
+    "FJ1487",
+    "FJ1488",
+    "FJ1489",
+    "FJ1490",
+    "FJ1491",
+    "FJ1492",
+    "FJ1493",
+    "FJ1494",
+    "FJ1495",
+    "FJ1496",
+    "FJ1497",
+    "FJ1498",
+    "FJ1499",
+    "FJ1500",
+    "FJ1501",
+    "FJ1502",
+    "FJ1503",
+    "FJ1504",
+    "FJ1505",
+    "FJ1506",
+    "FJ1507",
+    "FJ1508",
+    "FJ1509",
+    "FJ1510",
+    "FJ1511",
+    "FJ1512",
+    "FJ1513",
+    "FJ1514",
+    "FJ1515",
+    "FJ1516",
+    "FJ1517",
+    "FJ1518",
+    "FJ3193",
+    "FJ3194",
+    "FJ3196",
+    "FJ3197",
+    "FJ3198",
+    "FJ3292",
+    "FJ3303",
+    "FJ3304",
+    "FJ3306",
+    "FJ3322",
+    "FJ3323",
+    "FJ3325",
+    "FJ3326",
+    "FJ3327",
+    "FJ3349",
+    "FJ3350",
+    "FJ3352",
+    "FJ3354",
+    "FJ3356",
+    "FJ3358",
+    "FJ3361",
+    "FJ3362",
+    "FJ3367",
+    "FJ3368",
+    "FJ3374",
+    "FJ3382",
+    "FJ3383",
+    "FJ3384",
+    "FJ3388",
+    "FJ3389",
+    "FJ3390",
+    "FJ3391"
+  ],
+  "elbowBoneName": "elbow_flexion",
+  "flexionAxis": "x",
+  "flexionSign": -1,
+  "elbow": [
+    -0.20903307765491252,
+    1.121001659437667,
+    -0.030804600884286003
+  ],
+  "shoulder": [
+    -0.1683907012144724,
+    1.4001529593216742,
+    -0.02099111836274428
+  ],
+  "wrist": [
+    -0.25040606272968685,
+    0.8925549049971073,
+    0.014765509120634833
+  ],
+  "sourceCommit": "1c38bf35c254a891200d3cedecfd57abebe83d8d",
+  "hingeWorldAxis": [
+    0.9977970879468501,
+    -0.05532614816384966,
+    0.03660585491608729
+  ],
+  "rangeDegrees": [
+    0,
+    130
+  ],
+  "rotationConvention": "Multiply the glTF rest quaternion by a local X axis quaternion using -flexionRadians.",
+  "annotationAnchors": {
+    "biceps": {
+      "partId": "FJ1478",
+      "position": [
+        -0.192,
+        1.265,
+        0.008
+      ]
+    },
+    "triceps": {
+      "partId": "FJ1479",
+      "position": [
+        -0.198,
+        1.268,
+        -0.073
+      ]
+    },
+    "brachialis": {
+      "partId": "FJ1486",
+      "position": [
+        -0.218,
+        1.196,
+        -0.022
+      ]
+    },
+    "tendon-biceps-distal": {
+      "partId": "tendon-biceps-distal",
+      "position": [
+        -0.221,
+        1.115,
+        -0.006
+      ]
+    },
+    "tendon-triceps-distal": {
+      "partId": "tendon-triceps-distal",
+      "position": [
+        -0.209,
+        1.14,
+        -0.059
+      ]
+    }
+  },
+  "calibration": "Joint centers use 25 mm end bands of original bone vertices; hinge uses distal humeral principal axis. Educational reference geometry, not patient calibration.",
+  "limitations": "Reference anatomy with authored visual skinning. No muscle activation, tendon load, collision, or physiological shortening is measured or simulated.",
+  "parts": [
+    {
+      "id": "FJ1466",
+      "name": "Abductor digiti minimi of right hand",
+      "system": "muscular",
+      "vertices": 542,
+      "triangles": 380,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1467",
+      "name": "Acromial part of right deltoid",
+      "system": "muscular",
+      "vertices": 545,
+      "triangles": 686,
+      "forearmWeightRange": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "FJ1468",
+      "name": "Clavicular part of right deltoid",
+      "system": "muscular",
+      "vertices": 2121,
+      "triangles": 1486,
+      "forearmWeightRange": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "FJ1470",
+      "name": "Flexor digiti minimi brevis of right hand",
+      "system": "muscular",
+      "vertices": 232,
+      "triangles": 216,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1471",
+      "name": "Flexor retinaculum of right wrist",
+      "system": "connective",
+      "vertices": 1303,
+      "triangles": 1414,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1472",
+      "name": "Right extensor carpi ulnaris",
+      "system": "muscular",
+      "vertices": 2167,
+      "triangles": 1136,
+      "forearmWeightRange": [
+        0.0005073062205321888,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1473",
+      "name": "Humeral head of right flexor carpi ulnaris",
+      "system": "muscular",
+      "vertices": 694,
+      "triangles": 680,
+      "forearmWeightRange": [
+        0.00017337517075133313,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1474",
+      "name": "Humeral head of right pronator teres",
+      "system": "muscular",
+      "vertices": 984,
+      "triangles": 856,
+      "forearmWeightRange": [
+        7.158417146790885e-05,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1475",
+      "name": "Right flexor digitorum superficialis",
+      "system": "muscular",
+      "vertices": 1998,
+      "triangles": 1912,
+      "forearmWeightRange": [
+        0.0017167807751291564,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1476",
+      "name": "Interosseous membrane of right forearm",
+      "system": "connective",
+      "vertices": 952,
+      "triangles": 692,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1477",
+      "name": "Lateral head of right triceps brachii",
+      "system": "muscular",
+      "vertices": 656,
+      "triangles": 838,
+      "forearmWeightRange": [
+        0.0,
+        0.9996541870540018
+      ]
+    },
+    {
+      "id": "FJ1478",
+      "name": "Long head of right biceps brachii",
+      "system": "muscular",
+      "vertices": 466,
+      "triangles": 492,
+      "forearmWeightRange": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1479",
+      "name": "Long head of right triceps brachii",
+      "system": "muscular",
+      "vertices": 504,
+      "triangles": 560,
+      "forearmWeightRange": [
+        0.0,
+        0.9992787012293431
+      ]
+    },
+    {
+      "id": "FJ1480",
+      "name": "Medial head of right triceps brachii",
+      "system": "muscular",
+      "vertices": 325,
+      "triangles": 372,
+      "forearmWeightRange": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1481",
+      "name": "Oblique head of right adductor pollicis",
+      "system": "muscular",
+      "vertices": 629,
+      "triangles": 534,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1482",
+      "name": "Opponens digiti minimi of right hand",
+      "system": "muscular",
+      "vertices": 534,
+      "triangles": 382,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1483",
+      "name": "Right abductor pollicis brevis",
+      "system": "muscular",
+      "vertices": 610,
+      "triangles": 576,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1484",
+      "name": "Right abductor pollicis longus",
+      "system": "muscular",
+      "vertices": 655,
+      "triangles": 592,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1485",
+      "name": "Right anconeus",
+      "system": "muscular",
+      "vertices": 700,
+      "triangles": 654,
+      "forearmWeightRange": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1486",
+      "name": "Right brachialis",
+      "system": "muscular",
+      "vertices": 630,
+      "triangles": 712,
+      "forearmWeightRange": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1487",
+      "name": "Right brachioradialis",
+      "system": "muscular",
+      "vertices": 1012,
+      "triangles": 1072,
+      "forearmWeightRange": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1488",
+      "name": "Right coracobrachialis",
+      "system": "muscular",
+      "vertices": 329,
+      "triangles": 280,
+      "forearmWeightRange": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "FJ1489",
+      "name": "Right extensor carpi radialis brevis",
+      "system": "muscular",
+      "vertices": 585,
+      "triangles": 522,
+      "forearmWeightRange": [
+        1.1310201784464624e-05,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1490",
+      "name": "Right extensor carpi radialis longus",
+      "system": "muscular",
+      "vertices": 528,
+      "triangles": 544,
+      "forearmWeightRange": [
+        1.489799166909389e-05,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1491",
+      "name": "Right extensor digiti minimi",
+      "system": "muscular",
+      "vertices": 304,
+      "triangles": 314,
+      "forearmWeightRange": [
+        4.675229548123383e-05,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1492",
+      "name": "Right extensor digitorum",
+      "system": "muscular",
+      "vertices": 1313,
+      "triangles": 1054,
+      "forearmWeightRange": [
+        0.0016338526523222985,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1493",
+      "name": "Right extensor indicis",
+      "system": "muscular",
+      "vertices": 426,
+      "triangles": 340,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1494",
+      "name": "Right extensor pollicis brevis",
+      "system": "muscular",
+      "vertices": 497,
+      "triangles": 438,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1495",
+      "name": "Right extensor pollicis longus",
+      "system": "muscular",
+      "vertices": 613,
+      "triangles": 488,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1496",
+      "name": "Right flexor carpi radialis",
+      "system": "muscular",
+      "vertices": 299,
+      "triangles": 310,
+      "forearmWeightRange": [
+        0.00023484654668159965,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1497",
+      "name": "Right flexor digitorum profundus",
+      "system": "muscular",
+      "vertices": 1520,
+      "triangles": 1304,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1498",
+      "name": "Right flexor pollicis longus",
+      "system": "muscular",
+      "vertices": 1311,
+      "triangles": 824,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1499",
+      "name": "Right flexor digitorum superficialis",
+      "system": "muscular",
+      "vertices": 329,
+      "triangles": 368,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1500",
+      "name": "Right infraspinatus muscle",
+      "system": "muscular",
+      "vertices": 528,
+      "triangles": 536,
+      "forearmWeightRange": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "FJ1501",
+      "name": "Right opponens pollicis",
+      "system": "muscular",
+      "vertices": 769,
+      "triangles": 680,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1502",
+      "name": "Right palmaris longus",
+      "system": "muscular",
+      "vertices": 2090,
+      "triangles": 1500,
+      "forearmWeightRange": [
+        0.000579162875174899,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1503",
+      "name": "Right pronator quadratus",
+      "system": "muscular",
+      "vertices": 1724,
+      "triangles": 1284,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1504",
+      "name": "Right subscapularis",
+      "system": "muscular",
+      "vertices": 2368,
+      "triangles": 1524,
+      "forearmWeightRange": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "FJ1505",
+      "name": "Right supinator",
+      "system": "muscular",
+      "vertices": 1229,
+      "triangles": 1266,
+      "forearmWeightRange": [
+        0.0001070612143734273,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1506",
+      "name": "Right supraspinatus",
+      "system": "muscular",
+      "vertices": 622,
+      "triangles": 564,
+      "forearmWeightRange": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "FJ1507",
+      "name": "Right teres major",
+      "system": "muscular",
+      "vertices": 775,
+      "triangles": 700,
+      "forearmWeightRange": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "FJ1508",
+      "name": "Right teres minor",
+      "system": "muscular",
+      "vertices": 316,
+      "triangles": 372,
+      "forearmWeightRange": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "FJ1509",
+      "name": "Set of dorsal interossei of right hand",
+      "system": "muscular",
+      "vertices": 2817,
+      "triangles": 1792,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1510",
+      "name": "Set of lumbricals of right hand",
+      "system": "muscular",
+      "vertices": 2144,
+      "triangles": 1640,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1511",
+      "name": "Set of palmar interossei of right hand",
+      "system": "muscular",
+      "vertices": 976,
+      "triangles": 738,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1512",
+      "name": "Short head of right biceps brachii",
+      "system": "muscular",
+      "vertices": 1035,
+      "triangles": 804,
+      "forearmWeightRange": [
+        0.0,
+        0.8455937236249172
+      ]
+    },
+    {
+      "id": "FJ1513",
+      "name": "Spinal part of right deltoid",
+      "system": "muscular",
+      "vertices": 1063,
+      "triangles": 1028,
+      "forearmWeightRange": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "FJ1514",
+      "name": "Superficial head of right flexor pollicis brevis",
+      "system": "muscular",
+      "vertices": 786,
+      "triangles": 540,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1515",
+      "name": "Transverse head of right adductor pollicis",
+      "system": "muscular",
+      "vertices": 535,
+      "triangles": 582,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1516",
+      "name": "Ulnar head of right pronator teres",
+      "system": "muscular",
+      "vertices": 486,
+      "triangles": 542,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1517",
+      "name": "Right extensor carpi ulnaris",
+      "system": "muscular",
+      "vertices": 662,
+      "triangles": 504,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ1518",
+      "name": "Ulnar head of right flexor carpi ulnaris",
+      "system": "muscular",
+      "vertices": 1262,
+      "triangles": 868,
+      "forearmWeightRange": [
+        0.001451043491002335,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3193",
+      "name": "Distal phalanx of right index finger",
+      "system": "skeletal",
+      "vertices": 187,
+      "triangles": 208,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3194",
+      "name": "Distal phalanx of right little finger",
+      "system": "skeletal",
+      "vertices": 138,
+      "triangles": 184,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3196",
+      "name": "Distal phalanx of right middle finger",
+      "system": "skeletal",
+      "vertices": 141,
+      "triangles": 170,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3197",
+      "name": "Distal phalanx of right ring finger",
+      "system": "skeletal",
+      "vertices": 114,
+      "triangles": 112,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3198",
+      "name": "Distal phalanx of right thumb",
+      "system": "skeletal",
+      "vertices": 181,
+      "triangles": 228,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3292",
+      "name": "Middle phalanx of right ring finger",
+      "system": "skeletal",
+      "vertices": 214,
+      "triangles": 306,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3303",
+      "name": "Middle phalanx of right index finger",
+      "system": "skeletal",
+      "vertices": 186,
+      "triangles": 256,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3304",
+      "name": "Middle phalanx of right little finger",
+      "system": "skeletal",
+      "vertices": 168,
+      "triangles": 206,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3306",
+      "name": "Middle phalanx of right middle finger",
+      "system": "skeletal",
+      "vertices": 221,
+      "triangles": 330,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3322",
+      "name": "Proximal phalanx of right index finger",
+      "system": "skeletal",
+      "vertices": 213,
+      "triangles": 360,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3323",
+      "name": "Proximal phalanx of right little finger",
+      "system": "skeletal",
+      "vertices": 186,
+      "triangles": 312,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3325",
+      "name": "Proximal phalanx of right middle finger",
+      "system": "skeletal",
+      "vertices": 266,
+      "triangles": 448,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3326",
+      "name": "Proximal phalanx of right ring finger",
+      "system": "skeletal",
+      "vertices": 202,
+      "triangles": 364,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3327",
+      "name": "Proximal phalanx of right thumb",
+      "system": "skeletal",
+      "vertices": 196,
+      "triangles": 316,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3349",
+      "name": "Right radius",
+      "system": "skeletal",
+      "vertices": 249,
+      "triangles": 408,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3350",
+      "name": "Right first metacarpal bone",
+      "system": "skeletal",
+      "vertices": 287,
+      "triangles": 526,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3352",
+      "name": "Right second metacarpal bone",
+      "system": "skeletal",
+      "vertices": 347,
+      "triangles": 610,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3354",
+      "name": "Right third metacarpal bone",
+      "system": "skeletal",
+      "vertices": 345,
+      "triangles": 586,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3356",
+      "name": "Right fourth metacarpal bone",
+      "system": "skeletal",
+      "vertices": 280,
+      "triangles": 422,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3358",
+      "name": "Right fifth metacarpal bone",
+      "system": "skeletal",
+      "vertices": 236,
+      "triangles": 428,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3361",
+      "name": "Right capitate",
+      "system": "skeletal",
+      "vertices": 245,
+      "triangles": 406,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3362",
+      "name": "Right clavicle",
+      "system": "skeletal",
+      "vertices": 420,
+      "triangles": 820,
+      "forearmWeightRange": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "FJ3367",
+      "name": "Right hamate",
+      "system": "skeletal",
+      "vertices": 316,
+      "triangles": 490,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3368",
+      "name": "Right humerus",
+      "system": "skeletal",
+      "vertices": 794,
+      "triangles": 1070,
+      "forearmWeightRange": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "FJ3374",
+      "name": "Right lunate",
+      "system": "skeletal",
+      "vertices": 191,
+      "triangles": 324,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3382",
+      "name": "Right pisiform",
+      "system": "skeletal",
+      "vertices": 110,
+      "triangles": 190,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3383",
+      "name": "Right scaphoid",
+      "system": "skeletal",
+      "vertices": 185,
+      "triangles": 302,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3384",
+      "name": "Right scapula",
+      "system": "skeletal",
+      "vertices": 2896,
+      "triangles": 5756,
+      "forearmWeightRange": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "FJ3388",
+      "name": "Right trapezium",
+      "system": "skeletal",
+      "vertices": 272,
+      "triangles": 424,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3389",
+      "name": "Right trapezoid",
+      "system": "skeletal",
+      "vertices": 267,
+      "triangles": 354,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3390",
+      "name": "Right triquetral",
+      "system": "skeletal",
+      "vertices": 139,
+      "triangles": 170,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "FJ3391",
+      "name": "Right ulna",
+      "system": "skeletal",
+      "vertices": 305,
+      "triangles": 482,
+      "forearmWeightRange": [
+        1.0,
+        1.0
+      ]
+    }
+  ]
+}

@@ -28,6 +28,19 @@ yarn-error.log*
 
 # local environment
 .env*
+!.env.example
+
+# Local development tools, private media, and browser test output
+/.tools/
+/.cache/
+/test-results/
+/playwright-report/
+/artifacts/private/
+*.blend1
+*.blend2
+/output/
+/assets/right-arm-source.json
+/assets/qa/build.log
 
 # deployment and generated files
 .vercel
