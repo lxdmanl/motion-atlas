@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "ES2022",
     "lib": [
       "dom",
       "dom.iterable",
@@ -15,8 +15,7 @@
     "moduleResolution": "bundler",
     "types": [
       "node",
-      "@cloudflare/workers-types",
-      "vinext/types"
+      "vite/client"
     ],
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -29,12 +28,8 @@
     }
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "app/**/*.ts", "app/**/*.tsx", "server/**/*.ts", "web/**/*.tsx",
+    "vite.config.ts", "vitest.config.ts", "playwright.config.ts", "tests/**/*.ts"
   ],
   "exclude": [
     "node_modules"
