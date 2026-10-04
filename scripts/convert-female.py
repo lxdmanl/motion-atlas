@@ -35,14 +35,14 @@ for ni,node in enumerate(doc['nodes']):
   pos=read(primitive['attributes']['POSITION']);norm=read(primitive['attributes']['NORMAL']);ind=read(primitive['indices']);base=len(positions)//3
   for i in range(1,len(pos),3):pos[i]+=shift
   positions.extend(pos);normals.extend(max(-32767,min(32767,round(v*32767))) for v in norm);indices.extend(i+base for i in ind)
- name=r.get('sourceLabel') or r['name'];system=r['system'];context=' '.join(r['parents']+[r['id'],name]).lower()
+ name=r.get('sourceLabel') or r['name'];name=r['name'] if name.strip() in ['','-','None','NA'] else name;system=r['system'];context=' '.join(r['parents']+[r['id'],name]).lower()
  if any(v in context for v in ['placenta','umbilical_cord','chorionic','decidua']):system='pregnancy'
  elif system=='circulatory':
   system='venous' if any(v in context for v in ['vein','venous','vena_']) else 'cardiac' if 'heart' in context else 'arterial'
  elif system=='nervous' and any(v in context for v in ['eye','ear','retina','lens','optic']):system='sensory'
  if len(blob)>6_000_000:flush()
  bounds=[[min(positions[i::3]) for i in range(3)],[max(positions[i::3]) for i in range(3)]]
- part={'id':r['id'],'name':name,'conceptId':r.get('ontologyId') or 'HRA:'+r['id'],'system':system,'chunk':len(chunks),'positions':append(positions),'normals':append(normals),'indices':append(indices),'vertexCount':len(positions)//3,'indexCount':len(indices),'bounds':bounds}
+ part={'id':r['id'],'name':name,'conceptId':r['ontologyId'] if r.get('ontologyId') not in [None,'','-','None','NA'] else 'HRA:'+r['id'],'system':system,'chunk':len(chunks),'positions':append(positions),'normals':append(normals),'indices':append(indices),'vertexCount':len(positions)//3,'indexCount':len(indices),'bounds':bounds}
  parts.append(part);nodeparts[ni]=part['id'];triangles+=len(indices)//3
 flush()
 def descendants(i):
@@ -52,6 +52,7 @@ for i,node in enumerate(doc['nodes']):
  elements=descendants(i)
  if not elements:continue
  extras=node.get('extras',{});name=extras.get('label') or node.get('name','Structure').replace('VH_F_','').replace('_',' ')
+ if name.strip() in ['','-','None','NA']:name=re.sub(r'^(VH_F_|Allen_)','',node.get('name','Structure')).replace('_',' ')
  identity=(name,tuple(elements))
  if identity in seen:continue
  seen.add(identity);concepts.append({'id':'HRA:'+node.get('name',str(i)),'name':name,'elements':elements})

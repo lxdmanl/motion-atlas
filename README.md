@@ -7,7 +7,7 @@ A separate, interactive anatomy studio with selectable male and female reference
 - Choose male or female anatomy; the geometry, catalogue, and available systems change together.
 - Orbit the body, pinch or scroll to zoom, and tap anatomy to identify a structure.
 - Toggle systems, show only one system, or switch between skeleton and organ presets.
-- Search official names and FMA identifiers; compound concepts select their full mesh set.
+- Search official names and source atlas identifiers; compound concepts select their full mesh set.
 - Isolate and automatically frame selected structures.
 - Expand the entire visible anatomy into individually spaced pieces.
 - Phone layouts use compact touch controls and panels that leave room for the anatomy.
@@ -34,6 +34,10 @@ Download the official BodyParts3D OBJ archive and English metadata tables, prepa
 
 This project has its own Git repository and Vercel configuration. It is independent of Model X Studio.
 
-## Validation limits
+## Validation
 
-Type checks and data validation cover both atlases, every mesh buffer, source concept membership, and valid/invalid search and inspection actions. Browser visual testing was not requested. Native WebMCP registration is feature-detected; action contracts were checked locally, but no supported native WebMCP validation context was available.
+Run `npm run check`, `npm run build`, `node scripts/validate-atlas.mjs`, `node scripts/validate-atlas.mjs atlas-female.json`, and `node scripts/validate-interactions.mjs`. Data checks cover every mesh buffer, labels, bounds, and source concept membership. Interaction checks cover nonoverlapping visible-part packing at three aspect ratios, search/inspection contracts, and tap-versus-drag/multitouch handling.
+
+The functionality audit exercised both reference models, system presets and switches, full explosion, direct selection, search, isolation, detail dismissal, rotation, and a 390×844 phone layout in the browser. Native WebMCP search and inspection were also exercised. Physical-device GPU performance and real multitouch hardware have not been tested.
+
+The subsequent visual refresh uses neutral lighting and shadcn buttons, badges, selects, switches, sliders, and sheets. Final visual revalidation depends on browser availability.
