@@ -4,6 +4,31 @@
 
 **目前狀態：3D 預覽、展示動畫及相機推論管線可運行；真實語音尚待本機 API Key 與現場驗收。** 不把模擬測試等同真人追蹤或真正語音成功。完整紀錄見 [驗收紀錄](docs/ACCEPTANCE.md)。
 
+## 介面截圖
+
+全身解剖工作台：旋轉探索 3D 模型，切換骨骼與肌肉圖層。
+
+![Motion Atlas 全身解剖工作台](docs/screenshots/workspace.png)
+
+<details>
+<summary>查看更多：右肘展示、骨骼圖層與肌肉選取</summary>
+
+**右肘展示模式** — 以滑桿探索屈伸。畫面中的 60° 是示範資料。
+
+![右手臂 60 度屈肘展示模式](docs/screenshots/elbow-demo.png)
+
+**骨骼圖層** — 隱藏肌肉，觀察右臂骨骼結構。
+
+![右手臂骨骼圖層](docs/screenshots/bones-layer.png)
+
+**肌肉選取** — 聚焦肱二頭肌，查看高亮結構與解剖說明。
+
+![肱二頭肌選取與側面解剖視圖](docs/screenshots/muscle-selection.png)
+
+</details>
+
+截圖擷取於 2026-10-04；模型來源與授權見[資料署名](public/ATTRIBUTION.md)。
+
 ## 啟動
 
 需要 Node.js 22.13+、Git LFS 與 Chrome / Edge。
