@@ -44,3 +44,45 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
 @media(max-width:1000px){.layers-panel{padding-inline:10px}.system-name{font-size:11px}}
 @media(max-width:767px){h1{font-size:28px;gap:9px}.eyebrow{font-size:9px}.top-actions{gap:5px;right:14px}.top-actions button{width:38px;height:40px;padding:0;border-radius:9px}.top-actions .icon-button{min-width:38px;width:38px}.identity-meta{font-size:10px}.anatomy-choice [data-slot=select-trigger]{min-height:40px}.layers-panel.mobile-open{border-radius:16px;padding:10px 14px 0}.layer-presets button{height:38px;font-size:12px}.system-row,.system-name{min-height:44px}.system-name{font-size:13px}.system-list{padding-right:12px}.panel-heading{font-size:13px}.panel-heading .mobile-only{height:40px;padding:0}.bottom-dock{padding:13px;gap:14px;border-radius:14px}.dock-layers{padding-right:12px;font-size:10px}.dock-reset{padding-left:12px}.explode-label{font-size:11px}.scene-caption{font-size:8px}.detail-sheet{border-radius:16px}.detail-header .structure-title{font-size:22px!important}.detail-actions{gap:3px}.search-panel{top:161px}.about-sheet{border-radius:0}}
 @media(max-height:600px) and (orientation:landscape){.layers-panel.mobile-open{top:132px}.bottom-dock{padding:10px 15px}.search-panel{top:70px}}
+
+/* Touch layouts keep camera controls outside the selectable anatomy. */
+.scene-caption{max-width:calc(100% - 32px);white-space:normal;text-align:center;overflow-wrap:anywhere}
+.scene-caption>span:not(.caption-line){min-width:0}.caption-line{flex-shrink:0}
+.structure-title{overflow-wrap:anywhere}.detail-header .structure-title:focus{outline:none}
+@media(max-width:767px){
+ .identity{left:max(16px,env(safe-area-inset-left));top:max(18px,env(safe-area-inset-top))}
+ .top-actions{right:max(12px,env(safe-area-inset-right));gap:4px}
+ .top-actions button,.top-actions .icon-button{width:44px;min-width:44px;height:44px;min-height:44px}
+ .view-controls{top:max(112px,calc(env(safe-area-inset-top) + 94px));right:12px;left:12px;transform:none;flex-direction:row;justify-content:center;gap:2px;width:fit-content;max-width:calc(100% - 24px);margin-inline:auto;padding:4px;border-radius:12px}
+ .view-controls button{width:44px;height:44px;flex-shrink:0}.view-controls i{width:1px;height:28px;margin:8px 4px}
+ .bottom-dock{left:12px;right:12px;width:auto;transform:none;max-width:520px;margin-inline:auto}
+ .dock-layers,.dock-reset{min-width:44px;min-height:48px}.dock-reset{padding-left:8px}.dock-layers{padding-right:8px}
+ .explode-control [data-slot=slider]{padding-block:13px}.explode-control [data-slot=slider-thumb]::after{inset:-14px}
+ .layer-presets button{min-height:44px;height:44px}.panel-foot button{min-height:44px;min-width:48px}
+ .system-row [data-slot=switch]::after{inset:-13px -6px}
+ .search-panel{top:max(108px,calc(env(safe-area-inset-top) + 90px))}.search-panel input{font-size:16px}
+ .search-note{display:none}.anatomy-search-results{max-height:min(360px,calc(100dvh - 220px))!important}
+ .anatomy-search-results [data-slot=combobox-item]{white-space:normal;overflow-wrap:anywhere}
+ .detail-sheet{gap:12px!important}.detail-header{gap:7px}.detail-header .structure-title{font-size:20px!important;line-height:1.2!important}
+ .detail-actions .secondary-action{min-height:44px}.detail-scroll{min-height:48px}.detail-actions{padding-top:6px}
+ .about-copy a{min-height:44px}.studio-footer button{min-height:24px}
+}
+@media(max-width:350px){
+ h1{font-size:24px;gap:6px}.identity-meta{font-size:9px}.eyebrow{font-size:8px}
+ .top-actions{gap:2px}.top-actions button,.top-actions .icon-button{width:44px;min-width:44px}
+ .bottom-dock{gap:8px;padding:11px}.explode-label{font-size:10px;gap:3px}.explode-label output{min-width:39px;padding:3px 5px}
+ .detail-sheet{padding:14px!important}.detail-header .structure-title{font-size:18px!important}.detail-header{padding-right:18px}
+ .detail-actions{gap:0}.detail-sheet .primary-action{min-height:44px}.detail-sheet .secondary-action{min-height:36px}
+}
+@media(max-height:600px) and (orientation:landscape){
+ .view-controls{top:76px;left:auto;right:max(12px,env(safe-area-inset-right));transform:none;flex-direction:row;width:auto;margin:0}
+ .view-controls button{width:44px;height:44px}.view-controls i{width:1px;height:28px;margin:8px 4px}
+ .layers-panel.mobile-open{top:12px;bottom:12px;left:max(12px,env(safe-area-inset-left));width:280px;max-height:none}
+ .detail-sheet,.detail-sheet.is-isolated{top:12px!important;bottom:12px!important;right:max(12px,env(safe-area-inset-right))!important;left:auto!important;width:300px!important;max-height:none!important;padding:16px!important;gap:12px!important}
+ body:has(.detail-sheet) .view-controls,body:has(.detail-sheet) .top-actions{visibility:hidden}
+ .search-panel{top:72px;width:350px;left:auto;right:12px}.search-panel input{font-size:16px}.search-note{display:none}
+ .anatomy-search-results{max-height:calc(100dvh - 190px)!important}
+}
+@media(max-width:767px){body:has(.detail-sheet) .view-controls{visibility:hidden}}
+
+@media(max-height:600px) and (orientation:landscape){body:has(.detail-sheet) .bottom-dock{left:12px;right:324px;width:auto;transform:none;max-width:none;margin:0}}
