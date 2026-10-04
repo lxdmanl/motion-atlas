@@ -1,43 +1,64 @@
 # Human Atlas
 
-A separate, interactive anatomy studio with selectable male and female reference models and a continuous assembled-to-exploded view. The male collection contains 2,234 meshes and 3,432 named concepts; the female collection contains 888 meshes and 1,073 selectable source nodes.
+An interactive 3D anatomy explorer built with React, Three.js, and shadcn/ui. Take the BodyParts3D adult male reference apart into **2,234 individually selectable meshes**, explore **15 anatomical systems**, and search **3,432 named concepts**.
+
+**[Explore the live demo](https://human-atlas-seven.vercel.app)**
 
 ## Explore
 
-- Choose male or female anatomy; the geometry, catalogue, and available systems change together.
-- Orbit the body, pinch or scroll to zoom, and tap anatomy to identify a structure.
-- Toggle systems, show only one system, or switch between skeleton and organ presets.
-- Search official names and source atlas identifiers; compound concepts select their full mesh set.
-- Isolate and automatically frame selected structures.
-- Expand the entire visible anatomy into individually spaced pieces.
-- Phone layouts use compact touch controls and panels that leave room for the anatomy.
+- Orbit, zoom, and select structures directly on the body.
+- Toggle individual systems or use skeleton and organ presets.
+- Move from assembled anatomy to a spaced inventory of every visible piece.
+- Search anatomical names and source identifiers.
+- Isolate a selected structure and read its details.
+- Use compact controls and detail panels on mobile.
 
-## Local development
+## Run locally
 
-Node 22.13+ is required. Run `npm ci`, then `npm run dev` (port 3016). `npm run check` checks TypeScript and `npm run build` creates the static Vite site. `node scripts/validate-atlas.mjs` validates every mesh buffer and concept membership.
+Requires Node.js 22.13 or newer. No API keys or accounts are needed.
 
-## Data and scope
+```sh
+npm ci
+npm run dev
+```
 
-BodyParts3D 4.0 adult male anatomy and Human Reference Atlas united-female v1.5, both licensed CC BY 4.0. All source meshes are preserved, with geometry simplified for browser performance. See [full attribution](public/ATTRIBUTION.md). Anatomy varies between people and neither dataset represents every human structure. The female collection includes reproductive anatomy, whole-body surface, and selected organs; skeleton and muscle coverage is partial. Eight pregnancy reference pieces are hidden by default in a separate layer.
+Open http://localhost:3016. To build the static site, run `npm run build`; the output is in `dist/`.
 
-The manifest retains source IDs, English anatomical names, mesh bounds, and compound concept membership. The UI uses curated display categories. Descriptions explicitly distinguish general system context from available individual organ explanations; the dataset itself does not provide prose definitions.
+## Validate
 
-## Renderer
+```sh
+npm run check
+node scripts/validate-atlas.mjs
+node scripts/validate-interactions.mjs
+npm run build
+```
 
-Indexed geometry is merged into batches; a per-structure GPU texture controls translation, selection and visibility. Only visible interactions trigger a render. The original component geometries remain available for accurate click selection without thousands of draw calls. Shadows are not recalculated for every anatomical part.
+Validation covers mesh buffers, names and concept membership, nonoverlapping exploded layouts at desktop and mobile aspect ratios, search and inspection contracts, and tap-versus-drag handling. Browser interaction checks have exercised selection, system controls, search, isolation, rotation, and a 390×844 layout. Physical-device performance and real multitouch hardware have not been tested.
 
-## Rebuilding assets
+## Anatomy data
 
-Download the official BodyParts3D OBJ archive and English metadata tables, prepare joined concepts and display system mappings, run `scripts/convert-anatomy.py`, then `node scripts/optimize-anatomy.mjs`. The latter preserves each source mesh and limits simplification error to 0.2% of the individual mesh extent. Final assets contain 2,288,268 triangles in approximately 33 MB compressed across progressively loaded chunks. The female collection contains 1,810,038 triangles. Use `scripts/convert-female.py`, then `node scripts/optimize-anatomy.mjs atlas-female.json` to rebuild it. Run `node scripts/compress-models.mjs` after either conversion.
+The current viewer uses **BodyParts3D 4.0**, an adult male reference anatomy, licensed **CC BY 4.0**. It does not represent every human structure or variation. Individual source meshes are distinct from named concepts, which may group multiple meshes. Descriptions distinguish general system context from individual organ explanations.
 
-## Deployment
+Geometry is simplified for browser performance while retaining every source mesh. The packaged model contains 2,288,268 triangles and downloads approximately 33 MB of compressed geometry. Full credits, source links, and adaptation details are in [ATTRIBUTION.md](public/ATTRIBUTION.md).
 
-This project has its own Git repository and Vercel configuration. It is independent of Model X Studio.
+This is an educational explorer, not a diagnostic or surgical tool.
 
-## Validation
+## How it works
 
-Run `npm run check`, `npm run build`, `node scripts/validate-atlas.mjs`, `node scripts/validate-atlas.mjs atlas-female.json`, and `node scripts/validate-interactions.mjs`. Data checks cover every mesh buffer, labels, bounds, and source concept membership. Interaction checks cover nonoverlapping visible-part packing at three aspect ratios, search/inspection contracts, and tap-versus-drag/multitouch handling.
+Geometry is merged into batches. Per-structure GPU textures control translation, visibility, and selection, while component geometry supports accurate picking. Exploded layouts pack only the visible pieces. Rendering updates when the scene changes; orbit controls remain responsive without thousands of separate draw calls.
 
-The functionality audit exercised both reference models, system presets and switches, full explosion, direct selection, search, isolation, detail dismissal, rotation, and a 390×844 phone layout in the browser. Native WebMCP search and inspection were also exercised. Physical-device GPU performance and real multitouch hardware have not been tested.
+The optional WebMCP tools expose anatomy search and inspection in compatible browsers. The visible interface works without them.
 
-The subsequent visual refresh uses neutral lighting and shadcn buttons, badges, selects, switches, sliders, and sheets. Final visual revalidation depends on browser availability.
+## Rebuilding geometry
+
+The repository includes browser-ready geometry. Rebuilding it is optional: obtain the official BodyParts3D OBJ archive and English metadata tables, prepare the joined concepts and display-system mappings, run `scripts/convert-anatomy.py`, then `node scripts/optimize-anatomy.mjs` and `node scripts/compress-models.mjs`. Simplification uses a 0.2% relative error limit per structure.
+
+## Deploy
+
+Import this repository into Vercel as a Vite project. The included `vercel.json` configures `npm ci`, `npm run build`, and the `dist` output directory. It can also be served by a static host.
+
+## License
+
+Original application code is released under the [MIT License](LICENSE). **The anatomy data has its own CC BY 4.0 license**; preserve the attribution when redistributing it. Third-party dependencies retain their respective licenses.
+
+Issues and pull requests are welcome. Please include reproduction steps and browser/device details for interaction problems.
